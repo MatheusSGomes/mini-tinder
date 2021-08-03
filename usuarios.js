@@ -87,7 +87,7 @@ let usuarios = [
   {
     _id: 'jessica-hartel',
     sexo: 'feminino',
-    nome: 'Jessica Hartel',
+    nome: 'Jéssica',
     foto: 'jessica-hartel.jpg',
     telefone: '98987755',
     likedList: ['h1'],
