@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-Tínder - Atualize Seus Dados</title>
+  <link rel="stylesheet" href="./styles/update.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Atualize Seus Dados</h1>
+    </header>
+    <main>
+      <form action="/update" method="post" enctype="multipart/form-data">
+
+        <div class="formulario">
+          <input type="text" name="nome" id="nome" value="<%= data.nome %>">
+          <input type="text" name="email" id="email" value="<%= data.email %>">
+          <input type="password" name="senha" id="senha" value="<%= data.senha %>">
+          <input type="text" name="telefone" id="telefone" value="<%= data.telefone %>">
+          
+          <div class="imagem-perfil">
+            <div class="input-image">
+              <input id="upload-button" type="file" name="filestoupload" id="foto">
+            </div>
+            <div class="imagem-usuario" style="background-image: url('/images/<%= data.foto %>');"></div>
+          </div>
+        </div><!-- FORMULÁRIO -->
+
+        <input type="submit" id="btn-atualizar" value="ATUALIZAR">
+      </form>
+    </main>
+  </div>
+
+  <div class="deletar-conta">
+    <div class="box-deletar-conta">
+      <h2>Deletar Conta?</h2>
+      <h3>Antes confirme com e-mail e senha</h3>
+      <form action="/delete" method="post">
+        <input type="text" name="email" id="email-delete" placeholder="E-MAIL">
+        <input type="password" name="senha" id="senha-delete" placeholder="SENHA">
+        <input type="submit" value="Deletar Conta">
+      </form>
+    </div>
+  </div>
+  <script src="./scripts/update.js"></script>
+</body>
+</html>

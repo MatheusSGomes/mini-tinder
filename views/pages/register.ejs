@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-Tínder - Cadastre-se</title>
+  <link href="./styles/register.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="formulario">
+      <form action="/register" method="POST" enctype="multipart/form-data">
+        <input type="text" name="nome" id="nome" placeholder="NOME" required>
+        <input type="number" name="idade" id="idade" placeholder="IDADE" min="18" required>
+        <input type="text" name="email" id="email" placeholder="EMAIL" required>
+        <input type="password" name="senha" id="senha" placeholder="SENHA" required>
+        <input type="tel" name="telefone" id="telefone" placeholder="TELEFONE" required>
+
+        <div class="containerSexo">
+          <label for="feminino">FEMININO
+            <input type="radio" name="sexo" id="feminino" value="feminino" required>
+          </label>
+
+          <label for="masculino">MASCULINO
+            <input type="radio" name="sexo" id="masculino" value="masculino" required>
+          </label>
+        </div>
+
+        <div class="imagem-perfil">
+          <div class="input-image">
+            <input id="upload-button" type="file" name="filestoupload" id="foto" required>
+          </div>
+          <div class="imagem-usuario"></div>
+        </div>
+        
+        <input type="submit" value="COMEÇAR">
+      </form>
+    </div>
+  </div>
+  <script src="./scripts/register.js"></script>
+</body>
+</html>
+
+

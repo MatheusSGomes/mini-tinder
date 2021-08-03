@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-Tínder - Game</title>
+  <link rel="stylesheet" href="./styles/game.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="/update"><button class="logon">EDITAR</button></a>
+      <a href="/matchs"><button class="meus-likes">MATCHS</button></a>
+      <a href="/logout"><button class="logout">SAIR</button></a>
+    </header>
+    <main>
+      <div id="img-slide">
+        <% for(let user of usuarios) { %>
+          <img src="/images/<%= user.foto %>">
+        <% } %> 
+      </div>
+      
+      <% for(var i = 0; i < usuarios.length; i++) { %>
+          <h2><%= usuarios[i].nome %></h2>
+      <% } %>
+    </main>
+    <footer>
+      <button class="btn-like" id="btn-like" onclick="like()"></button>
+      <button class="btn-dislike" id="btn-dislike" onclick="dislike()"></button>
+    </footer>
+  </div>
+  <div class="all">
+    <% for(var i = 0; i < usuarios.length; i++) { %>
+      <span id="id" data-id="<%= usuarios[i]._id %>"></span>
+    <% } %>
+  </div>
+  <script src="./scripts/game.js"></script>
+</body>
+</html>

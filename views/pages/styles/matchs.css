@@ -1,0 +1,103 @@
+/* img {
+  width: 90%;
+} */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+button:active{
+  transform: scale(1.1);
+  transition: transform .1s ease-in-out;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.container {
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.users-liked {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.user-box {
+  width: 400px;
+  height: 90px;
+  padding: 30px 15px;
+  margin: 15px 0px;
+  background: white;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, .2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+div.user {
+  display: flex;
+  align-items: center;
+}
+
+button.btn-send-messsage {
+  width: 45px;
+  height: 45px;
+  background-image: url('../images/send-message.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: cover;
+  border-radius: 50%;
+  border-width: 0;
+  margin-right: 10px;
+}
+
+div.img-user {
+  width: 70px;
+  height: 70px;
+  /* background-image: url('../images/a.jpg'); */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+div.user p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-size: 12pt;
+  margin-left: 10px;
+}
+
+/* BACK BUTTON */
+div.btn-back {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+.btn-back button {
+  width: 60px;
+  height: 60px;
+  background-image: url('../images/back-game.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+  border-width: 0;
+  background-color: transparent;
+}

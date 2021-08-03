@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-Tínder - Seus Matchs</title>
+  <link rel="stylesheet" href="./styles/matchs.css">
+</head>
+<body>
+  <div class="container">
+    <div class="users-liked">
+      <h1>Seus Matchs</h1>
+      
+      <% for(let user of matchs) { %>
+        <div class="user-box">
+          <div class="user">
+            <div class="img-user" style="background-image: url('../images/<%= user.foto %>');"></div>
+            <p><%= user.nome %></p>
+          </div>
+          
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=<%= user.telefone %>&text=Ol%C3%A1!"><button class="btn-send-messsage"></button></a>
+          
+        </div>
+      <% } %>
+    </div>
+    
+    <div class="btn-back">
+      <button onclick="goBack()"></button>
+    </div>
+  </div>
+
+  <script src="./scripts/matchs.js"></script>
+</body>
+</html>

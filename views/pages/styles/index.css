@@ -1,0 +1,167 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+header {
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+header .logo {
+  width: 150px;
+  height: 40px;
+  background-image: url('../images/tinder.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+main .buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main button {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  width: 150px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 30px;
+}
+
+main button:active {
+  transform: scale(1.1);
+  transition: transform .1s;
+}
+
+main button:focus {
+  outline: none;
+}
+
+main button:first-child {
+  border: 3px solid #be1e2d;
+  background: transparent;
+  color: black;
+}
+
+main button:last-child {
+  border: 0;
+  background: #be1e2d;
+  color: white;
+}
+
+main button:last-child a{
+  color: white;
+  text-decoration: none;
+}
+.error {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  background-color: rgba(250, 0, 0, 0.7);
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+}
+
+.welcome {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10pt;
+  font-weight: bold;
+  background-color: rgba(0, 250, 117, 0.7);
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+}
+
+/* CORAÇÃO */
+main .box-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .heart {
+  width: 220px;
+  height: 220px;
+  background-image: url('../images/love.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* BOX ENTRAR */
+.entrar {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-entrar {
+  background: white;
+  width: 350px;
+  height: 250px;
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+}
+
+.box-entrar form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-entrar input {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+  width: 230px;
+  border: 3px solid #be1e2d;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.box-entrar input:last-child {
+  background: #be1e2d;
+  color: white;
+}
+
+.box-entrar input:active {
+  transform: scale(1.1);
+  transition: transform .1s;
+}
+
+.box-entrar input:focus {
+  outline: none;
+}

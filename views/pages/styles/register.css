@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* caret-color: #be1e2d; */
+  /* caret-color: transparent; */
+}
+
+.container {
+  padding: 0 2%;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.formulario {
+  margin: 30px;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario input {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt;
+  font-weight: bold; 
+
+  width: 250px;
+  border: 3px solid #be1e2d;
+  border-radius: 30px;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.formulario input:last-child {
+  background-color: #be1e2d;
+  color: white;
+}
+
+.formulario input:active {
+  transform: scale(1.1);
+  transition: transform .1s;
+}
+
+.formulario input[type=text]:focus,
+.formulario input[type=number]:focus,
+.formulario input[type=password]:focus {
+  transform: scale(1.1);
+}
+
+.formulario input[type=number]:out-of-range {
+  border-color: red;
+  box-shadow: 0px 0px 20px 0px rgba(255,0,0,0.51);
+}
+
+.formulario input:focus {
+  outline: none;
+}
+
+.imagem-perfil {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-image input[type="file"] {
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  background-image: url('../images/plus-upload.svg');
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+
+  border-color: #be1e2d;
+  border-width: 5px;
+  border-radius: 30px;
+  border-style: dashed;
+  
+  color: transparent;
+}
+
+.input-image input[type=file]:active {
+  transform: scale(0.95);
+}
+
+.input-image input[type=file]:focus {
+  outline: none;
+}
+
+.input-image input[type="file"]::-webkit-file-upload-button {
+  display: none;
+}
+
+.input-image input[type="file"]:disabled {
+  border-color: rgba(128, 128, 128, 0.3);
+  background-image: url('../images/plus-upload-disabled.svg');
+  transform: scale(0.9);
+}
+
+/* SENHA */
+div.tooglePassword {
+  position: relative;
+  width: 260px;
+  height: 50px;
+  margin: 0px;
+  padding: 0px;
+}
+
+button.toogle-button {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /* left: 0; */
+  right: 20px;
+  margin: auto;
+  background-color: transparent;
+  border-width: 0px;
+  font-size: 8pt;
+  font-family: 'Open sans', sans-serif;
+  font-weight: bold;
+  color: gray;
+}
+
+/* RADIO */
+.containerSexo {
+  display: flex;
+  flex-direction: row;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label[for="feminino"],
+label[for="masculino"] {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  color: rgba(0, 0, 0, .6);
+  cursor: pointer;
+
+  width: 120px;
+  border: 3px solid #be1e2d;
+  border-radius: 30px;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  background-color: transparent;
+}
+
+label[for="feminino"].active,
+label[for="masculino"].active {
+  background-color: #bd676f;
+  color: white;
+}
+
+.imagem-usuario {
+  margin: 10px;
+  width: 200px;
+  height: 230px;
+  background-image: url('../images/user.svg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 5px solid #be1e2d;
+  border-radius: 30px;
+}
